@@ -1,0 +1,2 @@
+# reducer-example
+Example reducer
