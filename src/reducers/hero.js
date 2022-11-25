@@ -6,7 +6,7 @@ import {
   import api from '../api/hero';
   
   const heroesAdapter = createEntityAdapter({
-    selectId: heroes => heroes.username
+    selectId: heroes => heroes.heroId
   });
 
   export const heroSelectors = heroesAdapter.getSelectors();
@@ -28,7 +28,7 @@ import {
     'heroes/getHero',
     async (heroId, thunkApi) => {
       try {
-        const response = await api.getUser(heroId);
+        const response = await api.getHero(heroId);
   
         return response;
       } catch (err) {
